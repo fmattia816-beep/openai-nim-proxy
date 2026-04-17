@@ -95,7 +95,7 @@ app.post('/v1/chat/completions', async (req, res) => {
       model: groqModel,
       messages: messages,
       temperature: temperature || 0.6,
-      max_tokens: max_tokens || 9024,
+      max_tokens: max_tokens || 128000,
       stream: stream || false
     };
 
