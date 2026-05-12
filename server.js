@@ -24,10 +24,10 @@ const ENABLE_THINKING_MODE = false; // Set to true to enable chat_template_kwarg
 // Model mapping (Groq model names)
 const MODEL_MAPPING = {
   'gpt-3.5-turbo': 'llama-3.3-70b-versatile',
-  'gpt-4':         'deepseek-r1-distill-llama-70b',
-  'gpt-4-turbo':   'llama-3.1-70b-versatile',
-  'gpt-4o':        'mixtral-8x7b-32768',
-  'claude-3-opus': 'gemma2-9b-it',
+  'gpt-4':         'llama-3.3-70b-versatile',
+  'gpt-4-turbo':   'openai/gpt-oss-20b',
+  'gpt-4o':        'meta-llama/llama-4-scout-17b-16e-instruct',
+  'claude-3-opus': 'openai/gpt-oss-120b',
 };
 
 // Health check endpoint
