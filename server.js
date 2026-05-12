@@ -107,16 +107,7 @@ app.post('/v1/chat/completions', async (req, res) => {
       stream: stream || false
     };
 
-    // Handle thinking mode per model
-    const isKimi = groqModel.includes('kimi');
-    if (ENABLE_THINKING_MODE && isKimi) {
-      groqRequest.chat_template_kwargs = { thinking: true };
-    } else if (isKimi) {
-      // Kimi has thinking ON by default — force it off for faster responses
-      groqRequest.chat_template_kwargs = { thinking: false };
-    } else if (ENABLE_THINKING_MODE) {
-      groqRequest.extra_body = { chat_template_kwargs: { thinking: true } };
-    }
+    // Groq doesn't support extra_body or chat_template_kwargs — skip entirely
     
     // Make request to Groq API
     const response = await axios.post(`${NIM_API_BASE}/chat/completions`, groqRequest, {
