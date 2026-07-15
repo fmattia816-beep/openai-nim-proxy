@@ -29,7 +29,7 @@ const MODEL_MAPPING = {
   'gpt-4o': 'mistralai/mistral-nemotron',
   'claude-3-opus': 'openai/gpt-oss-120b',
   'claude-3-sonnet': 'openai/gpt-oss-20b',
-  'gemini-pro': 'deepseek-ai/deepseek-v3.2' 
+  'gemini-pro': 'deepseek-ai/deepseek-v4-flash' 
 };
 
 // Health check endpoint
